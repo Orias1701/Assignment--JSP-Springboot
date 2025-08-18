@@ -70,4 +70,10 @@ public class HelloController {
         model.addAttribute("ten", ten);
         return "XinChao";
     }
+
+    @GetMapping("/")
+    public String home() {
+        return "index"; // trỏ về index.jsp
+}
+
 }
