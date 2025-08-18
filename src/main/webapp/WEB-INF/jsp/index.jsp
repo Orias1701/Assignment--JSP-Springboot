@@ -7,13 +7,40 @@
     <link rel="stylesheet" href="<c:url value='/css/style.css'/>">
 </head>
 <body>
-<h2>Danh sách Bài tập JSP</h2>
-<ul>
-    <li><a href="/bai1">Bài 1 - Bảng nhân với 2</a></li>
-    <li><a href="/bai2">Bài 2 - Bảng nhân 2 (có dấu ?)</a></li>
-    <li><a href="/bai3">Bài 3 - Bảng cửu chương</a></li>
-    <li><a href="/bai4">Bài 4 - Giai thừa</a></li>
-    <li><a href="/bai5">Bài 5 - Form Xin Chào</a></li>
-</ul>
+<h2>Danh sách Bài Tập JSP</h2>
+
+<table border="1" cellpadding="10" cellspacing="0" align="center">
+    <tr>
+        <th>Bài</th>
+        <th>Mô tả</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Bảng nhân với 2</td>
+        <td><a href="/bai1">Xem</a></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Bảng nhân 2 (có dấu ?)</td>
+        <td><a href="/bai2">Xem</a></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Bảng cửu chương</td>
+        <td><a href="/bai3">Xem</a></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Giai thừa</td>
+        <td><a href="/bai4">Xem</a></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Form Xin Chào</td>
+        <td><a href="/bai5">Xem</a></td>
+    </tr>
+</table>
+
 </body>
 </html>
