@@ -18,7 +18,6 @@ public class TestApplication extends SpringBootServletInitializer {
     }
 }
 
-
 // @SpringBootApplication
 // public class TestApplication {
 

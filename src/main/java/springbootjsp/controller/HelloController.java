@@ -36,7 +36,7 @@ public class HelloController {
     @GetMapping("/bai3")
     public String bai3(Model model) {
         Map<Integer, List<String[]>> tables = new LinkedHashMap<>();
-        for (int n = 2; n <= 9; n++) {
+        for (int n = 2; n <=9 ; n++) {
             List<String[]> list = new ArrayList<>();
             for (int i = 1; i <= 10; i++) {
                 list.add(new String[]{i + " x " + n, String.valueOf(i * n)});
@@ -62,13 +62,13 @@ public class HelloController {
 
     @GetMapping("/bai5")
     public String formNhapThongTin() {
-        return "NhapThongTin";
+        return "bai5";
     }
 
-    @PostMapping("/xin-chao")
+    @PostMapping("/b5-xin-chao")
     public String xinChao(@RequestParam("ten") String ten, Model model) {
         model.addAttribute("ten", ten);
-        return "XinChao";
+        return "bai5_XinChao";
     }
 
     @GetMapping("/")

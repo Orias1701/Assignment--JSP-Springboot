@@ -3,23 +3,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Bài 2</title>
+    <title>Nhập thông tin</title>
     <link rel="stylesheet" href="<c:url value='/css/style.css'/>">
 </head>
 <body>
-<h2>Bài 2: Bảng nhân 2 (có dấu ?)</h2>
-<table border="1" cellpadding="5">
-    <tr>
-        <th>Phép nhân</th>
-        <th>Kết quả</th>
-    </tr>
-    <c:forEach var="row" items="${result}">
-        <tr>
-            <td>${row[0]}</td>
-            <td>${row[1]}</td>
-        </tr>
-    </c:forEach>
-</table>
+<h2>Nhập thông tin</h2>
+<form method="post" action="/b5-xin-chao">
+    Nhập tên: <input type="text" name="ten"/>
+    <input type="submit" value="Gửi"/>
+</form>
 <form class = "form-return" action="<c:url value='/' />" method="get">
     <button type="submit" class="styled-button">Trở về</button>
 </form>
