@@ -10,7 +10,7 @@
 
 <body>
     <h2>Nhập thông tin sinh viên</h2>
-    <form method="post" action="b6-result">
+    <form class="infoForm" method="post" action="b6-result">
         Họ tên: <input type="text" name="hoten">
         Quê quán: <input type="text" name="quequan">
         Điểm: <input type="text" name="diem">

@@ -99,7 +99,7 @@ public class HelloController {
                         Model model) {
         int kq = a * b;
         model.addAttribute("kq", kq);
-        return "bai7"; // quay lại Nhan.jsp kèm kết quả
+        return "bai7";
     }
 
     @GetMapping("/")

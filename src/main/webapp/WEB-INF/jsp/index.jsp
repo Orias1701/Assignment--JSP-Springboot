@@ -52,6 +52,11 @@
             <td>Phép nhân</td>
             <td><a href="/bai7">Xem</a></td>
         </tr>
+        <tr>
+            <td>8 - 9</td>
+            <td>Hàng</td>
+            <td><a href="/hang">Xem</a></td>
+        </tr>
     </table>
 </body>
 

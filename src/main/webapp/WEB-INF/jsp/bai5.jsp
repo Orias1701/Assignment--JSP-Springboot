@@ -10,7 +10,7 @@
 
 <body>
     <h2>Nhập thông tin</h2>
-    <form method="post" action="/b5-xin-chao">
+    <form class="infoForm" method="post" action="/b5-xin-chao">
         Nhập tên: <input type="text" name="ten" />
         <input type="submit" value="Gửi" />
     </form>
