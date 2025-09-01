@@ -71,9 +71,39 @@ public class HelloController {
         return "bai5_XinChao";
     }
 
+    @GetMapping("/bai6")
+    public String showForm() {
+        return "bai6";
+    }
+
+    @PostMapping("/b6-result")
+    public String showResult(
+            @RequestParam("hoten") String hoten,
+            @RequestParam("quequan") String quequan,
+            @RequestParam("diem") String diem,
+            Model model) {
+        model.addAttribute("hoten", hoten);
+        model.addAttribute("quequan", quequan);
+        model.addAttribute("diem", diem);
+        return "bai6_result";
+    }
+
+    @GetMapping("/bai7")
+    public String showNhanForm() {
+        return "bai7"; // hiển thị form ban đầu
+    }
+
+    @PostMapping("/bai7")
+    public String tinhNhan(@RequestParam("a") int a,
+                        @RequestParam("b") int b,
+                        Model model) {
+        int kq = a * b;
+        model.addAttribute("kq", kq);
+        return "bai7"; // quay lại Nhan.jsp kèm kết quả
+    }
+
     @GetMapping("/")
     public String home() {
-        return "index"; // trỏ về index.jsp
-}
-
+        return "index";
+    }
 }

@@ -8,7 +8,7 @@ body {
 h2 {
     color: #2c3e50;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 table {
@@ -35,6 +35,9 @@ tr:nth-child(even) {
 }
 
 form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     width: 300px;
     margin: 50px auto;
     padding: 20px;
@@ -45,6 +48,7 @@ form {
 }
 
 input[type="text"] {
+    grid-column: span 2;
     width: 100%;
     padding: 8px;
     margin: 8px 0;
@@ -52,10 +56,14 @@ input[type="text"] {
 }
 
 input[type="submit"] {
+    grid-column: span 3;
+    width: 50%;
+    margin: auto;
     background: #3498db;
     color: white;
     border: none;
     padding: 10px 15px;
+    margin-top: 30px;
     cursor: pointer;
     border-radius: 4px;
 }
@@ -63,3 +71,35 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: #2980b9;
 }
+
+.content {
+    width: 20%;
+    margin: auto;
+}
+
+form.form-return {
+    width: 100px;
+    margin: 20px auto;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+button.styled-button {
+    width: 100px;
+    background-color: transparent;
+    border: 1px solid #2c92e6;
+    color: #2c92e6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.styled-button:hover {
+    border: 1px solid #f11b5b;
+    color: #f11b5b;
+}
+
