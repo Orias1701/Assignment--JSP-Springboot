@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    margin: 20px;
+    color: #333;
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 60%;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+    height: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    height: 50px;
+    padding: 0px;
+    background: #3498db;
+    color: white;
+}
+
+th button {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    letter-spacing: 0.1em;;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 158, 26);
+    border: none;
+}
+
+tr:nth-child(even) {
+    background: #ecf0f1;
+}
+
+form.infoForm,
+form.hangForm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+input[type="text"],
+input[type="number"] {
+    grid-column: span 2;
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+.infoForm button[type="submit"],
+.modal-content button[type="submit"] {
+    grid-column: span 3;
+    width: 50%;
+    margin: auto;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background: #2980b9;
+}
+
+.content {
+    width: 20%;
+    margin: auto;
+}
+
+form.form-return {
+    width: 100px;
+    margin: 20px auto;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+button.styled-button {
+    width: 100px;
+    background-color: transparent;
+    border: 1px solid #2c92e6;
+    color: #2c92e6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.styled-button:hover {
+    border: 1px solid #ff7ba2;
+    color: #ff7ba2;
+}
+
+/* ==================== PHẦN POPUP ==================== */
+
+/* Overlay popup */
+.modal {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    z-index: 1000;
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Nội dung popup */
+.modal-content {
+    background: #fff;
+    margin: 8% auto;
+    padding: 20px;
+    width: 650px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+form.hangForm{
+    border: none;
+    box-shadow: none;
+}
+
+/* Nút đóng (x) */
+.close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+/* Hiệu ứng mượt khi mở form */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+table tr td:last-child {
+    width: 200px;
+}
+
+table tr td:last-child button,
+table tr td:last-child form button{
+    padding: 8px 24px;
+    margin: 0px 5px;
+    background-color: #2c92e6;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+}
+
+table tr td:last-child form button{
+    background-color: #e62c2c;
+}
