@@ -6,10 +6,16 @@
     <meta charset="UTF-8">
     <title>Xin Chào</title>
     <link rel="stylesheet" href="<c:url value='/css/style.css'/>">
+    <style>
+        .red {
+            color: red;
+            display: inline;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>Xin chào bạn: ${ten}</h2>
+    <h2>Xin chào bạn:<p class="red">${ten}</p></h2>
     <form class="form-return" action="<c:url value='/bai5' />" method="get">
         <button type="submit" class="styled-button">Form</button>
     </form>

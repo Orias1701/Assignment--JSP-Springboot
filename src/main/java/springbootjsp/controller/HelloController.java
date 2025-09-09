@@ -56,6 +56,7 @@ public class HelloController {
             else gt *= i;
             list.add(new String[]{i + "!", String.valueOf(gt)});
         }
+        // Collections.reverse(list);
         model.addAttribute("result", list);
         return "bai4";
     }
