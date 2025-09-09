@@ -15,6 +15,9 @@
         <p>Quê quán: ${quequan}</p>
         <p>Điểm: ${diem}</p>
     </div>
+    <form class="form-return" action="<c:url value='/bai6' />" method="get">
+        <button type="submit" class="styled-button">Form</button>
+    </form>
     <form class="form-return" action="<c:url value='/' />" method="get">
         <button type="submit" class="styled-button">Trở về</button>
     </form>

@@ -10,6 +10,9 @@
 
 <body>
     <h2>Xin chào bạn: ${ten}</h2>
+    <form class="form-return" action="<c:url value='/bai5' />" method="get">
+        <button type="submit" class="styled-button">Form</button>
+    </form>
     <form class="form-return" action="<c:url value='/' />" method="get">
         <button type="submit" class="styled-button">Trở về</button>
     </form>
