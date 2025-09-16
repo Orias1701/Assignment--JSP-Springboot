@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @Controller
@@ -77,15 +79,24 @@ public class HelloController {
         return "bai6";
     }
 
-    @PostMapping("/b6-result")
+    @PostMapping("/bai6-result")
     public String showResult(
+            @RequestParam("ma") String ma,
             @RequestParam("hoten") String hoten,
-            @RequestParam("quequan") String quequan,
-            @RequestParam("diem") String diem,
+            @RequestParam("ngaysinh") String ngaysinh,
+            @RequestParam(value = "gioitinh", required = false) String gioitinh,
             Model model) {
+
+        // Parse input (yyyy-MM-dd) từ input type="date"
+        LocalDate date = LocalDate.parse(ngaysinh); // mặc định parse yyyy-MM-dd
+        String ngaysinhFormatted = date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")); // Format lại thành dd/MM/yyyy
+
+        String danhxung = (gioitinh != null && gioitinh.equals("Nam")) ? "Ông" : "Bà";
+
+        model.addAttribute("ma", ma);
         model.addAttribute("hoten", hoten);
-        model.addAttribute("quequan", quequan);
-        model.addAttribute("diem", diem);
+        model.addAttribute("ngaysinh", ngaysinhFormatted);
+        model.addAttribute("danhxung", danhxung);
         return "bai6_result";
     }
 

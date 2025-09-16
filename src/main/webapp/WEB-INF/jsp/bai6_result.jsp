@@ -4,16 +4,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kết quả</title>
+    <title>Kết quả đăng kí</title>
     <link rel="stylesheet" href="<c:url value='/css/style.css'/>">
 </head>
 
 <body>
-    <h2>Thông tin bạn vừa nhập:</h2>
+    <h2>Thông tin User</h2>
     <div class="content">
-        <p>Họ tên: ${hoten}</p>
-        <p>Quê quán: ${quequan}</p>
-        <p>Điểm: ${diem}</p>
+        <p><strong>Mã:</strong> ${ma}</p>
+        <p><strong>Họ tên:</strong> ${hoten}</p>
+        <p><strong>Ngày sinh:</strong> ${ngaysinh}</p>
+        <p>Cảm ơn <b>${danhxung}</b> đã sử dụng dịch vụ của chúng tôi</p>
     </div>
     <form class="form-return" action="<c:url value='/bai6' />" method="get">
         <button type="submit" class="styled-button">Form</button>
