@@ -11,8 +11,8 @@
 <body>
     <h2>Nhập 2 số để tính tích</h2>
     <form class="infoForm" action="bai7" method="post">
-        A: <input type="text" name="a">
-        B: <input type="text" name="b">
+        A: <input type="text" name="a" value="${a}">
+        B: <input type="text" name="b" value="${b}">
         <input type="submit" value="=">
     </form>
     <div class="content">

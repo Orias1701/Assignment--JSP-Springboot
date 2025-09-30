@@ -87,9 +87,8 @@ public class HelloController {
             @RequestParam(value = "gioitinh", required = false) String gioitinh,
             Model model) {
 
-        // Parse input (yyyy-MM-dd) từ input type="date"
-        LocalDate date = LocalDate.parse(ngaysinh); // mặc định parse yyyy-MM-dd
-        String ngaysinhFormatted = date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")); // Format lại thành dd/MM/yyyy
+        LocalDate date = LocalDate.parse(ngaysinh); // mặc định yyyy-MM-dd
+        String ngaysinhFormatted = date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")); // Format lại dd/MM/yyyy
 
         String danhxung = (gioitinh != null && gioitinh.equals("Nam")) ? "Ông" : "Bà";
 
@@ -102,7 +101,7 @@ public class HelloController {
 
     @GetMapping("/bai7")
     public String showNhanForm() {
-        return "bai7"; // hiển thị form ban đầu
+        return "bai7";
     }
 
     @PostMapping("/bai7")
@@ -110,6 +109,8 @@ public class HelloController {
                         @RequestParam("b") int b,
                         Model model) {
         int kq = a * b;
+        model.addAttribute("a", a);
+        model.addAttribute("b", b);
         model.addAttribute("kq", kq);
         return "bai7";
     }
